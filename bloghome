@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Full viewport background with gradient */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Main container fully isolated */
+        .content-wrapper {
+            position: relative;
+            z-index: 1000; /* Ensure the content sits above all injected elements */
+            width: 90%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background for isolation */
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            margin: 20px auto; /* Add margin to create spacing for scrolling */
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .text-box {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            width: 300px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        .text-box img {
+            margin: 5px;
+        }
+
+        iframe {
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Block the tiiny.host forced ad */
+        div[style*="z-index: 9999"][style*="position: fixed"] {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="content">
+             <div class="text-box">
+                <a href="https://thenamesc.tiiny.site/">Home</a>
+            </div> 
+        </div>
+    </div>
+</body>
+
+</html>

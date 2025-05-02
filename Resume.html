@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>celshader's Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: black;
+      position: relative;
+      overflow: hidden;
+      color: white;
+    }
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+    }
+    header {
+      background-color: #9e10cb;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 2px solid white;
+      border-top: 2px solid white;
+    }
+    nav {
+      display: flex;
+      background: #9e10cb;
+      border-bottom: 2px solid white;
+    }
+    nav button {
+      flex: 1;
+      padding: 1rem;
+      border: none;
+      background: #9e10cb;
+      color: white;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background: #7a0b9e;
+    }
+    .tab {
+      display: none;
+      padding: 2rem;
+    }
+    .active {
+      display: block;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    for (let i = 0; i < 500; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.top = Math.random() * window.innerHeight + 'px';
+      star.style.left = Math.random() * window.innerWidth + 'px';
+      document.body.appendChild(star);
+    }
+  </script>
+  <header>
+    <h1>celshaders's resume</h1>
+  </header>
+  <nav>
+    <button onclick="openTab('resume')">Resume</button>
+    <button onclick="openTab('images')">Images of past works</button>
+    <button onclick="openTab('videos')">Videos of past works</button>
+    <button onclick="openTab('projects')">Published projects</button>
+  </nav>
+  <div id="resume" class="tab active">
+    <h2>Resume</h2>
+    <p>Hi, I am celshaders. I do several artistic things, such as; Drawing, Animation, 3D Animation, Game design, map creation, and so forth. I created this resume to send and show to people to demonstrate the things that i do. I am great with talking to people, and figuring out what people want. I am a massive nerd,  and love video games. I'll be honest, writing this is hard, especially if you have this website zoomed out, because then it might look like one like of words. There are more things in the tabs above that show examples of things that i do.</p>
+  </div>
+  <div id="images" class="tab">
+    <h2>Images</h2>
+    <img src="images/image1.jpg" alt="Image 1">
+    <img src="images/image2.jpg" alt="Image 2">
+  </div>
+  <div id="videos" class="tab">
+    <h2>Videos</h2>
+    <video controls>
+      <source src="videos/video1.mp4" type="video/mp4">
+    </video>
+    <video controls>
+      <source src="videos/video2.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div id="projects" class="tab">
+    <h2>Projects</h2>
+    <p>Describe your projects or include embeds from external sources like GitHub or YouTube.</p>
+  </div>
+  <script>
+    function openTab(tabId) {
+      var tabs = document.querySelectorAll('.tab');
+      tabs.forEach(function(tab) {
+        tab.classList.remove('active');
+      });
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
